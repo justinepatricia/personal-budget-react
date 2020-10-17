@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import axios from 'axios';
 
 import {
   BrowserRouter as Router,
@@ -13,8 +14,10 @@ import HomePage from './HomePage/HomePage';
 import Footer from './Footer/Footer';
 import AboutPage from './AboutPage/AboutPage';
 import LoginPage from './LoginPage/LoginPage';
+//import Chart from './Chart/Chart';
+import ServerF from './ServerF/server';
 
-function App() {
+function App() {  
   return (
     <Router>
       <Menu/>
@@ -27,12 +30,14 @@ function App() {
           <Route path ="/Login">
             <LoginPage/>
           </Route>
-          <Route path ="/">
-            <HomePage/>
+          < Route path ="/">
+            <HomePage/>        
           </Route>
         </Switch>
       </div>
       <HomePage/>
+    
+      <ServerF/>
       <Footer/>
     </Router>
   );
